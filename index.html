@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b50">
+  <title>Varsity Finder BD</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172b45;
+    }
+    header {
+      background: #102b50;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 25px; }
+    header p { margin: 9px 0 0; color: #d8e5f5; }
+    main {
+      width: min(100% - 28px, 650px);
+      margin: 28px auto;
+    }
+    .intro, .form-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 3px 15px #142b4b0d;
+    }
+    h2 { margin-top: 0; font-size: 20px; }
+    label {
+      display: block;
+      margin: 15px 0 7px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccd5e1;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+    }
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 14px;
+      background: #1763b1;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .notice {
+      background: #fff8e8;
+      padding: 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Varsity Finder BD</h1>
+    <p>Find Your University Admission Opportunities</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>তোমার যোগ্য বিশ্ববিদ্যালয় খুঁজে নাও</h2>
+      <p>একবার Academic Information দাও। তোমার জন্য উপযুক্ত Admission Opportunities খুঁজে পাওয়ার লক্ষ্যেই আমাদের এই প্ল্যাটফর্ম।</p>
+    </section>
+
+    <section class="form-card">
+      <h2>Academic Information</h2>
+
+      <form id="studentForm">
+        <label for="group">তোমার বিভাগ</label>
+        <select id="group" required>
+          <option value="">বিভাগ নির্বাচন করো</option>
+          <option value="science">Science</option>
+          <option value="humanities">Humanities</option>
+          <option value="business_studies">Business Studies</option>
+        </select>
+
+        <label for="sscYear">SSC Passing Year</label>
+        <select id="sscYear" required>
+          <option value="">বছর নির্বাচন করো</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+
+        <label for="sscGpa">SSC GPA</label>
+        <input id="sscGpa" type="number" min="0" max="5" step="0.01" placeholder="যেমন: 4.83" required>
+
+        <label for="hscYear">HSC Passing Year</label>
+        <select id="hscYear" required>
+          <option value="">বছর নির্বাচন করো</option>
+          <option>2025</option>
+          <option>2026</option>
+        </select>
+
+        <label for="hscGpa">HSC GPA</label>
+        <input id="hscGpa" type="number" min="0" max="5" step="0.01" placeholder="যেমন: 4.50" required>
+
+        <button type="submit">Find My Universities</button>
+      </form>
+    </section>
+
+    <p class="notice">
+      গুরুত্বপূর্ণ: এই Website এখনো পরীক্ষামূলক পর্যায়ে রয়েছে।
+      ভর্তি-যোগ্যতার ফলাফল চালু হয়নি। সব তথ্য Official Admission Circular
+      যাচাই করে প্রকাশ করা হবে।
+    </p>
+  </main>
+
+  <footer>
+    Varsity Finder BD © 2026
+  </footer>
+
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("ধন্যবাদ! Admission matching feature এখনো তৈরি হচ্ছে।");
+    });
+  </script>
+</body>
+</html>
